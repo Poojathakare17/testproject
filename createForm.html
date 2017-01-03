@@ -1,0 +1,44 @@
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./myFormCss.css">
+</head>
+
+<body ng-app="BlankApp" ng-controller="AppCtrl" ng-cloak>
+    <form ng-submit="submitForm(user)">
+        <div>
+            <md-input-container>
+                <label>Name</label>
+                <input ng-model="user.name">
+            </md-input-container>
+        </div>
+        <div>
+            <md-input-container>
+                <label>Email</label>
+                <input ng-model="user.email" type="email">
+            </md-input-container>
+        </div>
+        <div>
+            <md-input-container>
+                <label>Password</label>
+                <input ng-model="user.password" type="password">
+            </md-input-container>
+        </div>
+     
+        <div flex-gt-xs>
+            <md-datepicker ng-model="user.myDate" md-placeholder="Enter dob"></md-datepicker>
+        </div>
+        <md-button class="md-raised" type="submit">Submit</md-button>
+    </form>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.0.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+    <script src="./myFormJs.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+</body>
+
+</html>

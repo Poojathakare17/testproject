@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./myFormCss.css">
+</head>
+
+<body ng-app="BlankApp" ng-controller="viewCtrl" ng-cloak>
+    <div>
+        <table class="table">
+            <tr>
+                <th>
+                    NAME
+                </th>
+                <th>
+                    EMAIL
+                </th>
+                <th>
+                    AGE
+                </th>
+                <th>
+                    DOB
+                </th>
+                <th>
+                    MOBILE
+                </th>
+            </tr>
+            <tr ng-repeat="row in data.slice(((currentPage-1)*itemsPerPage), ((currentPage)*itemsPerPage))">
+                <td>{{row.name}}</td>
+                <td>{{row.email}}</td>
+                <td>{{row.age}}</td>
+                <td>{{row.myDate | date : format : timezone}}</td>
+                <td>{{manyContacts}}</td>
+            </tr>
+        </table>
+        <pagination total-items="totalItems" ng-model="currentPage" ng-change="pageChanged()" class="pagination-sm" items-per-page="itemsPerPage"></pagination>
+        <hr />
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <!--<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.10/angular.js"></script>-->
+    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.0.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+    <script src="./myFormJs.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+</body>
+
+</html>
