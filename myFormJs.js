@@ -20,11 +20,11 @@ angular.module('BlankApp', ['ngMaterial'])
         };
         $scope.submitForm = function (user) {
             console.log(user);
-            // $http.post("http://localhost:1337/form/save", user).success(function (data, status) {
-            //     result = data;
-            // }).error(function () {
-            //     console.log("err");
-            // });
+            $http.post("http://localhost:3000/view1", user).success(function (data, status) {
+                result = data;
+            }).error(function () {
+                console.log("err");
+            });
         }
     })
     .controller('viewCtrl', function ($scope, $http, $timeout) {
