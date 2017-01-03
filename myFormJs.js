@@ -1,9 +1,8 @@
 var adminUrl="http://localhost:1337";
-angular.module('BlankApp', ['ngMaterial', 'ui.bootstrap'])
+angular.module('BlankApp', ['ngMaterial'])
     .controller('AppCtrl', function ($scope, $http) {
         $scope.myDate = new Date();
         $scope.user = {};
-        $scope.user.contacts = [{}];
         $scope.minDate = new Date(
             $scope.myDate.getFullYear(),
             $scope.myDate.getMonth() - 2,
